@@ -1,6 +1,7 @@
 package gay.block36.ilositelen;
 
 import java.io.File;
+import java.nio.charset.StandardCharsets;
 import java.util.AbstractMap;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,14 +13,10 @@ public class Sitelen {
     public static void readFile() {
         try {
             var url = Sitelen.class.getClassLoader().getResource("sitelenpona.txt");
-            var file = new File(url.toURI());
-            var scanner = new Scanner(file);
+            var scanner = new Scanner(url.openStream(), StandardCharsets.UTF_8);
             while (scanner.hasNextLine()) {
                 var entry = parseWordEntry(scanner.nextLine());
                 table.put(entry.getKey(), entry.getValue());
-            }
-            for (String k: table.keySet()) {
-                System.out.println(k +": " +table.get(k));
             }
         } catch (Exception e) {
             e.printStackTrace();

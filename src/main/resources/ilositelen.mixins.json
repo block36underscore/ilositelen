@@ -4,9 +4,9 @@
   "package": "gay.block36.ilositelen.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "OutgoingChatMessageMixin"
   ],
   "client": [
+    "ChatScreenMixin"
   ],
   "injectors": {
     "defaultRequire": 1
