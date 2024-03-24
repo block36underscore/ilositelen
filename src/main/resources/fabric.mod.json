@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "ilositelen",
+  "version": "${version}",
+  "name": "ilositelen",
+  "description": "ni li ilo ni: ona li pali e sitelen pi sitelen pona lon musi Manka",
+  "authors": [
+    "block36_"
+  ],
+  "contact": {
+    "repo": "https://github.com/block36underscore/ilositelen"
+  },
+  "license": "MIT",
+  "icon": "assets/ilositelen/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "gay.block36.ilositelen.client.IlositelenClient"
+    ]
+  },
+  "mixins": [
+    "ilositelen.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
